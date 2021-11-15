@@ -1,0 +1,49 @@
+Association StudentSpecialEducationProgramEligibilityAssociation
+  documentation "This association indicates those students who were evaluated for eligibility for a Special Education program."
+  domain entity EdFi.EducationOrganization
+    documentation "Indicates the education organization where the student was evaluated for special education services.  This could be a school or a district. "
+  domain entity EdFi.Student
+    documentation "Student who is evaluated by a Local Education Agency or a School.  This is often their resident district.  Students could be enrolled or unenrolled or private schooled or home schooled."
+  domain entity EdFi.Program
+    documentation "Indicates the program that the student is being evaluated for."
+    is part of identity
+  date ConsentToEvaluationReceivedDate
+    documentation "Indicates the date on which the Local Education Agency received written consent for the evaluation from the student's parent."
+    is part of identity
+  date ConsentToEvaluationDate
+    documentation "The date in which the student's parent gave a consent (Parent Consent Date)"
+    is optional
+  descriptor IDEAPart
+    documentation "Indicates if the evaluation is done under Part B IDEA or Part C IDEA"
+    is required
+  bool EvaluationCompleteIndicator
+    documentation "Indicates the evaluation completed status."
+    is optional
+  date EligibilityEvaluationDate
+    documentation "Indicates the month, day, and year when the written individual evaluation report was completed."
+    is optional
+  descriptor EligibilityEvaluationType
+    documentation "Indicates if this is an initial or reevaluation."
+    is required
+  date EligibilityDeterminationDate
+    documentation "Indicates the month, day, and year the LEA held the admission, review, and dismissal committee meeting regarding the child's eligibility determination for special education and related services. An individualized education plan (IEP) would be developed and implemented for a child admitted into special education on this same date"
+    is optional
+  bool IDEAIndicator
+    documentation "Indicates whether or not the student was determined eligible and enrolled in special education and related services as a result of the evaluation report and the admission, review, and dismissal committee meeting decision."
+    is optional
+  descriptor EvaluationDelayReason
+    documentation "Refers to the justification as to why the evaluation report was completed beyond the State-established timeframe."
+    is optional
+  string EvaluationLateReason
+    documentation "Refers to additional information for delay in doing the evaluation."
+    is optional
+    max length 500
+  integer EvaluationDelayDays
+    documentation "Indicates the number of student absences, if any, beginning the first instructional day following the date on which the Local Education Agency (LEA) received written parental consent for the evaluation."
+    is optional
+  date TransitionNotificationDate
+    documentation "Indicates the month, day, and year the LEA Notification of Potentially Eligible for Special Education Services was sent by the early childhood intervention (ECI) contractor to the local education agency (LEA) to notify them that a child enrolled in ECI will shortly reach the age of eligibility for Part B services and the child is potentially eligible for services under Part B, early childhood special education (ECSE). The LEA Notification constitutes a referral to the LEA for an initial evaluation and eligibility determination of the child which the parent may opt out from the referral."
+    is optional
+  date TransitionConferenceDate
+    documentation "Indicates the month, day, and year when the transition conference was held (for a child receiving early childhood intervention (ECI) services) among the lead agency, the family, and the LEA where the child resides to discuss the child’s potential eligibility for early childhood special education (ECSE) services."
+    is optional
