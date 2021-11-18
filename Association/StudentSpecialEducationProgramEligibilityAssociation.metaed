@@ -7,6 +7,7 @@ Association StudentSpecialEducationProgramEligibilityAssociation
   domain entity EdFi.Program
     documentation "Indicates the program that the student is being evaluated for."
     is part of identity
+    role name Program
   date ConsentToEvaluationReceivedDate
     documentation "Indicates the date on which the Local Education Agency received written consent for the evaluation from the student's parent."
     is part of identity
