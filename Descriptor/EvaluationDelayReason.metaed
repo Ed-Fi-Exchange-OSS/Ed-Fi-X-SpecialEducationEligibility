@@ -1,0 +1,2 @@
+Descriptor EvaluationDelayReason
+    documentation "An indication of the reason for a delay in evaluation."
